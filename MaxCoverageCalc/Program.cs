@@ -25,9 +25,8 @@ namespace MaxCoverageCalc
                 int max = GetMaxCoverage(sortedLifeguards);
                 Console.WriteLine("Max Coverage :" + max);
                 Save2File(fi, max);
-                
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         static void Save2File(FileInfo inputFile, int maxCoverage)
@@ -64,7 +63,7 @@ namespace MaxCoverageCalc
                 }
                 else
                 {
-                    if (lifeguard.StartTimeUnit < previousEndTime)
+                    if (lifeguard.StartTimeUnit <= previousEndTime)
                     {
                         nonOverlappingHours = shiftHours - (previousEndTime - lifeguard.StartTimeUnit);
                         // Contiguous time units of the current lifeguard without overlap

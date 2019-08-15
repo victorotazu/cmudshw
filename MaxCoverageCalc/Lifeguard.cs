@@ -20,5 +20,6 @@ namespace MaxCoverageCalc
         public int Id { get => id; set => id = value; }
         public int StartTimeUnit { get => startTimeUnit; set => startTimeUnit = value; }
         public int EndTimeUnit { get => endTimeUnit; set => endTimeUnit = value; }
+        
     }
 }
